@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DigiShop</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="font-['helvetica_now_display'] bg-black text-white">
+    <nav class="w-full flex justify-between px-4 py-3">
+      <h3 class="text-xl font-bold">DigiShop</h3>
+      <% var loggedin = typeof loggedin !== "undefined" ? loggedin : true %> 
+      <% if (loggedin) { %>
+        <div class="flex gap-5">
+          <a href="/shop" class="text-gray-300 hover:text-white">Shop</a>
+          <a href="/cart" class="text-gray-300 hover:text-white">Cart</a>
+          <a href="/account" class="text-gray-300 hover:text-white">My Account</a>
+          <a class="text-red-500 hover:text-red-400" href="/users/logout">Logout</a>
+        </div>
+      <% } %>
+    </nav>
+  </body>
+</html>
